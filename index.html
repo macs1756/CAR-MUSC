@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/style.css?_v=20221118215038">
+	<link rel="stylesheet" href="css/style.css?_v=20221119000511">
 </head>
 <body>
 
@@ -17,13 +17,22 @@
 <header class="header">	
 	<div class="header__wr d-flex a-i-center j-c-space content">
 		<ul class="d-flex header__list cen">
-			<li><a href="xs">Главная</a></li>
-			<li class="mobileNone"><a href="xs">Оклейка автомобилей</a></li>
-			<li class="mobileNone"><a href="xs">Детейлинг автомобилей</a></li>
-			<li class="mobileNone"><a href="xs">Галерея работ</a></li>
+			<li><a href="#">Главная</a></li>
+			<li class="mobileNone"><a href="#">Оклейка автомобилей</a></li>
+			<li class="mobileNone"><a href="#">Детейлинг автомобилей</a></li>
+			<li class="mobileNone"><a href="#">Галерея работ</a></li>
 		</ul>
 		<button class="header__burger"><span></span></button>
-		<div class="burger__body">body</div>
+		<div class="burger__body">
+			<ul>
+				<li><a href="#">Оклейка автомобилей</a></li>
+				<li><a href="#">Детейлинг автомобилей</a></li>
+				<li><a href="#">Галерея работ</a></li>
+				<li><a href="#">Про нас</a></li>
+				<li><a href="#">Блог</a></li>
+				<li><a href="#">Відгуки</a></li>
+			</ul>
+		</div>
 	</div>
 			
 </header>
@@ -34,8 +43,25 @@
 
 <main>
 	
-<section class="initial">
+<section class="initial d-flex flex-column a-i-center">
+	<div class="initial__body">
 	
+			<h1 class="ml4">
+				<span class="letters letters-1">MUSC</span>
+				<span class="letters letters-2">CAR</span>
+				<span class="letters letters-3">GO!</span>
+		</h1>
+
+		
+		<div class="initial__dekor">
+			<span class="initial__dekor-item1"></span>
+			<span class="initial__dekor-item2"></span>
+			<span class="initial__dekor-item3"></span>
+			<span class="initial__dekor-item4"></span>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae orci urna amet penatibus.</p>
+		<a class="initial__btn" href="#"><span>Наши услуги</span></a>
+	</div>
 </section>
 	
 
@@ -55,7 +81,9 @@
 
 </div>
 
-<script src="js/dynamicAdapt.js?_v=20221118215038"></script>
-<script src="js/app.js?_v=20221118215038"></script>
+
+<script src="js/dynamicAdapt.js?_v=20221119000511"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js?_v=20221119000511"></script>
+<script src="js/app.js?_v=20221119000511"></script>
 </body>
 </html>

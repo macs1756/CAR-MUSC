@@ -185,6 +185,28 @@ html {
   display: none;
 }
 
+h1 {
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 125%;
+  color: #DB3138;
+  width: 100%;
+  height: 187px;
+}
+
+.ml4 {
+  position: relative;
+}
+
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+
 .cen {
   text-align: center;
 }
@@ -288,12 +310,9 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
   width: 100%;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
 .header ul {
@@ -303,18 +322,30 @@ html {
 }
 
 .header__wr {
+  position: relative;
   gap: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .header.active {
-  padding-top: 15px;
-  padding-bottom: 15px;
   background: rgba(20, 20, 20, 0.3215686275);
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
+}
+
+.header.active .header__wr {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 @supports not ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
@@ -414,12 +445,30 @@ html {
 .burger__body {
   position: absolute;
   top: 100%;
-  right: 0;
-  display: none;
+  background-color: rgba(255, 255, 255, 0.782);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  text-align: right;
+  color: #DB3138;
+  padding: 15px 20px;
+  line-height: 70px;
+  width: 320px;
+  right: -100%;
+  -webkit-transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+  -o-transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+  transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+.burger__body a {
+  font-size: 30px;
+  letter-spacing: 0.045em;
 }
 
 .burger__body.active {
-  display: block;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  right: 0%;
 }
 
 footer {
@@ -433,6 +482,81 @@ footer {
 .initial {
   width: 100%;
   height: 1000px;
+  overflow: hidden;
+}
+
+.initial__body {
+  padding-top: 237px;
+  text-align: center;
+}
+
+.initial__body p {
+  padding-top: 42px;
+  padding-bottom: 42px;
+  font-size: 38px;
+  max-width: 420px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.initial__dekor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5px;
+}
+
+.initial__dekor span {
+  display: block;
+  background: #DB3138;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 10px;
+  height: 10px;
+}
+
+.initial__dekor span:not(:last-child) {
+  margin-right: 30px;
+}
+
+.initial__btn,
+.btn {
+  line-height: 140%;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  padding-right: 5px;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+.initial__btn span,
+.btn span {
+  position: relative;
+  z-index: 3;
+}
+
+.initial__btn:after,
+.btn:after {
+  content: "";
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  display: block;
+  width: 70%;
+  height: 100%;
+  background: #DB3138;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: 600px) {
@@ -442,12 +566,20 @@ footer {
 }
 
 @media (max-width: 1580px) {
-  .header {
-    padding-top: calc(20px + 20 * ((100vw - 320px) / 1920));
+  h1 {
+    font-size: calc(60px + 90 * ((100vw - 320px) / 1920));
+  }
+
+  h1 {
+    height: calc(75px + 112 * ((100vw - 320px) / 1920));
   }
 
   .header {
-    padding-bottom: calc(20px + 20 * ((100vw - 320px) / 1920));
+    padding-left: calc(0px + 100 * ((100vw - 320px) / 1920));
+  }
+
+  .header {
+    padding-right: calc(0px + 100 * ((100vw - 320px) / 1920));
   }
 
   .header ul {
@@ -458,8 +590,56 @@ footer {
     font-size: calc(18px + 6 * ((100vw - 320px) / 1920));
   }
 
+  .header__wr {
+    padding-top: calc(20px + 20 * ((100vw - 320px) / 1920));
+  }
+
+  .header__wr {
+    padding-bottom: calc(20px + 20 * ((100vw - 320px) / 1920));
+  }
+
   .initial {
     height: calc(500px + 500 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__body {
+    padding-top: calc(120px + 117 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__body p {
+    padding-top: calc(22px + 20 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__body p {
+    padding-bottom: calc(22px + 20 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__body p {
+    font-size: calc(20px + 18 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__dekor span:not(:last-child) {
+    margin-right: calc(17px + 13 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__btn,
+  .btn {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__btn,
+  .btn {
+    padding-left: calc(18px + 7 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__btn,
+  .btn {
+    padding-top: calc(12px + 3 * ((100vw - 320px) / 1920));
+  }
+
+  .initial__btn,
+  .btn {
+    padding-bottom: calc(8px + 4 * ((100vw - 320px) / 1920));
   }
 }
 
@@ -495,6 +675,20 @@ footer {
   .header ul {
     letter-spacing: 0.06em;
     font-size: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .burger__body {
+    width: 100%;
+  }
+}
+
+@media (any-hover: hover) {
+  .initial__btn:hover:after,
+  .btn:hover:after {
+    content: "";
+    width: 100%;
   }
 }
 

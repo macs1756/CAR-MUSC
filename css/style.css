@@ -194,6 +194,28 @@ h1 {
   height: 187px;
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 140%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #DB3138;
+}
+
+h3 span {
+  font-size: 24px;
+}
+
 .ml4 {
   position: relative;
 }
@@ -648,6 +670,90 @@ footer {
   border-right: 1px solid transparent;
 }
 
+.attainment {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.attainment__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.attainment__item-text {
+  margin-right: 20px;
+}
+
+.attainment__dekor {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.attainment__p {
+  max-width: 520px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.attainment__item-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.attainment__table-first,
+.attainment__table-second {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.attainment__table-second {
+  margin-top: 38px;
+}
+
+.table-first-item {
+  border: 1px solid #898989;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.table-first-item p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 @media (min-width: 600px) {
   .mobileNone {
     display: block;
@@ -661,6 +767,18 @@ footer {
 
   h1 {
     height: calc(75px + 112 * ((100vw - 320px) / 1920));
+  }
+
+  h2 {
+    font-size: calc(24px + 28 * ((100vw - 320px) / 1920));
+  }
+
+  h3 {
+    font-size: calc(30px + 22 * ((100vw - 320px) / 1920));
+  }
+
+  h3 span {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1920));
   }
 
   .header {
@@ -746,6 +864,54 @@ footer {
   .initial__net-item li:not(:last-child) {
     margin-bottom: calc(10px + 10 * ((100vw - 320px) / 1920));
   }
+
+  .attainment {
+    padding-left: calc(0px + 100 * ((100vw - 320px) / 1920));
+  }
+
+  .attainment {
+    padding-right: calc(0px + 100 * ((100vw - 320px) / 1920));
+  }
+
+  .attainment {
+    padding-top: calc(80px + 80 * ((100vw - 320px) / 1920));
+  }
+
+  .attainment {
+    padding-bottom: calc(80px + 80 * ((100vw - 320px) / 1920));
+  }
+
+  .attainment__dekor {
+    margin-top: calc(20px + 20 * ((100vw - 320px) / 1920));
+  }
+
+  .attainment__dekor {
+    margin-bottom: calc(20px + 40 * ((100vw - 320px) / 1920));
+  }
+
+  .attainment__p {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1920));
+  }
+
+  .attainment__table-second {
+    margin-top: calc(30px + 8 * ((100vw - 320px) / 1920));
+  }
+
+  .table-first-item {
+    padding-top: calc(15px + 20 * ((100vw - 320px) / 1920));
+  }
+
+  .table-first-item {
+    padding-bottom: calc(20px + 25 * ((100vw - 320px) / 1920));
+  }
+
+  .table-first-item {
+    padding-left: calc(10px + 10 * ((100vw - 320px) / 1920));
+  }
+
+  .table-first-item {
+    padding-right: calc(10px + 10 * ((100vw - 320px) / 1920));
+  }
 }
 
 @media (max-width: 767px) {
@@ -795,6 +961,13 @@ footer {
   .initial__net-item-3 li {
     text-align: right;
   }
+
+  .attainment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (max-width: 767px) and (max-width: 1580px) {
@@ -836,6 +1009,10 @@ footer {
 
   .header__burger.close:before {
     bottom: calc(50% - 1px);
+  }
+
+  .table-first-item p {
+    font-size: 14px;
   }
 }
 

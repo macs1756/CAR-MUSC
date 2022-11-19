@@ -764,6 +764,7 @@ footer {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    border-right: 1px solid #fff;
   }
 
   .initial__net-item-1 li {
@@ -772,6 +773,7 @@ footer {
 
   .initial__net-item-2 {
     border-left: 1px solid #fff;
+    border-right: 1px solid transparent;
     margin-left: 25px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;

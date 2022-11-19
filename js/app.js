@@ -37,8 +37,7 @@ btnBurger.addEventListener("click", item =>{
 
 
 btnBurger.addEventListener("click", ()=>{
-		document.querySelector("body").classList.toggle("scrollNone");
-		burger.classList.toggle("active");
+		burger.classList.toggle("burger__body-active");
 		btnBurger.classList.remove("header__burger_close");
 });
 
@@ -52,9 +51,9 @@ let header = document.querySelector("header");
 
 window.addEventListener("scroll", ()=>{
 	if(scrollY>10){
-		header.classList.add("active");
+		header.classList.add("header-active");
 	}else{
-		header.classList.remove("active");
+		header.classList.remove("header-active");
 	}
 })
 

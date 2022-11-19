@@ -314,6 +314,9 @@ h1 {
   padding-left: 100px;
   padding-right: 100px;
   width: 100%;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .header ul {
@@ -323,28 +326,28 @@ h1 {
 }
 
 .header__wr {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   position: relative;
   gap: 10px;
   padding-top: 40px;
   padding-bottom: 40px;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
-.header.active {
-  background: rgba(20, 20, 20, 0.3215686275);
+.header.header-active {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  background: rgba(20, 20, 20, 0.937254902);
 }
 
-.header.active .header__wr {
+.header.header-active .header__wr {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  position: relative;
+  gap: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -449,7 +452,7 @@ h1 {
   padding: 15px 20px;
   line-height: 70px;
   width: 320px;
-  right: -100%;
+  right: -110%;
   -webkit-transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
   -o-transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
   transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
@@ -460,20 +463,14 @@ h1 {
   letter-spacing: 0.045em;
 }
 
-.burger__body.active {
-  -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-  right: 0%;
+.burger__body-active {
+  position: absolute;
+  right: 0;
 }
 
 @supports not ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
-  .header.active {
-    background: #141414;
-  }
-
   .burger__body {
-    background-color: rgba(20, 20, 20, 0.9333333333);
+    background-color: black;
   }
 }
 

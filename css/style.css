@@ -310,6 +310,7 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 900;
   padding-left: 100px;
   padding-right: 100px;
   width: 100%;
@@ -346,12 +347,6 @@ h1 {
   transition: all 0.3s linear;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-
-@supports not ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
-  .header.active {
-    background: #141414;
-  }
 }
 
 .header__burger {
@@ -444,8 +439,9 @@ h1 {
 
 .burger__body {
   position: absolute;
+  z-index: 999999;
   top: 100%;
-  background-color: rgba(255, 255, 255, 0.782);
+  background-color: rgba(0, 0, 0, 0.662);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   text-align: right;
@@ -471,6 +467,16 @@ h1 {
   right: 0%;
 }
 
+@supports not ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+  .header.active {
+    background: #141414;
+  }
+
+  .burger__body {
+    background-color: rgba(20, 20, 20, 0.9333333333);
+  }
+}
+
 footer {
   height: 200vh;
   padding-top: 100px;
@@ -488,6 +494,8 @@ footer {
 .initial__body {
   padding-top: 237px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .initial__body p {

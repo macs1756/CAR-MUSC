@@ -162,3 +162,52 @@ anime.timeline({loop: true})
 
 
 
+let attainmentTableItem = document.querySelectorAll(".table-first-item");
+
+  function xx(){
+   let min = +0;
+   let max = +attainmentTableItem.length-1
+      let randomaizer = min + Math.round(Math.random()*(max-min));
+      attainmentTableItem[randomaizer].classList.add("active");
+      delay(1990).then(() =>{
+				attainmentTableItem[randomaizer].classList.remove("active");
+			 });
+
+  };
+  setInterval(xx,2100);
+
+
+  const swiper = new Swiper('.swiper__item', {
+  
+
+    spaceBetween: 25,
+    navigation: {
+      nextEl: '.swiper_arrow-next',
+      prevEl: '.swiper_arrow-prev',
+    },
+    pagination: {
+      el: ".progressbar",
+      type: "progressbar"
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        loop: false
+      },
+      601: {
+        loop: true,
+      },
+      767:{
+        slidesPerView: 2,
+        loop: true
+      },
+      1100: {
+        slidesPerView: 3,
+        loop: true
+      }
+    }
+    
+
+  });
+  

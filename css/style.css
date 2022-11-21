@@ -877,10 +877,16 @@ footer {
   z-index: 1;
 }
 
+.swiper_arrow-prev {
+  -webkit-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
 .swiper_arrow-next {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(180deg) translateY(50px);
+      -ms-transform: rotate(180deg) translateY(50px);
+          transform: rotate(180deg) translateY(50px);
 }
 
 .progressbar {
@@ -890,6 +896,39 @@ footer {
 
 :root {
   --swiper-theme-color: #DB3138;
+}
+
+.progressbar__hint {
+  max-width: 32px;
+  max-height: 32px;
+  margin-top: 10px;
+  -webkit-animation: mg 2s linear infinite normal 0s forwards;
+          animation: mg 2s linear infinite normal 0s forwards;
+  display: block;
+}
+
+@-webkit-keyframes mg {
+  0% {
+    margin-left: 40px;
+    opacity: 1;
+  }
+
+  100% {
+    margin-left: 5px;
+    opacity: 0.5;
+  }
+}
+
+@keyframes mg {
+  0% {
+    margin-left: 40px;
+    opacity: 1;
+  }
+
+  100% {
+    margin-left: 5px;
+    opacity: 0.5;
+  }
 }
 
 @media (min-width: 600px) {
@@ -908,6 +947,10 @@ footer {
   }
 
   .progressbar {
+    display: none;
+  }
+
+  .progressbar__hint {
     display: none;
   }
 }

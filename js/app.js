@@ -177,7 +177,7 @@ let attainmentTableItem = document.querySelectorAll(".table-first-item");
   setInterval(xx,2100);
 
 
-  const swiper = new Swiper('.swiper__item', {
+new Swiper('.swiper__item', {
   
 
     spaceBetween: 25,
@@ -211,3 +211,13 @@ let attainmentTableItem = document.querySelectorAll(".table-first-item");
 
   });
   
+
+  
+
+new Swiper('.swiper__assurance', {
+  pagination: {
+    el: ".progressbar-2",
+    type: "progressbar"
+  },
+
+  });

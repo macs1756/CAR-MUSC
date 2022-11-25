@@ -193,7 +193,8 @@ new Swiper('.swiper__item', {
     breakpoints: {
       0: {
         slidesPerView: 1,
-        loop: false
+        loop: false,
+        spaceBetween: 25,
       },
       601: {
         loop: true,
@@ -219,5 +220,26 @@ new Swiper('.swiper__assurance', {
     el: ".progressbar-2",
     type: "progressbar"
   },
-
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      loop: false,
+    },
+    600: {
+      loop: true,
+    },
+    767: {
+      slidesPerView: 2,
+      loop: true,
+      spaceBetween: 25,
+    },  
+    993: {
+      slidesPerView: 1,
+      loop: true,
+    }
+  },
+  navigation: {
+    nextEl: '.next',
+    prevEl: '.prev',
+  },
   });

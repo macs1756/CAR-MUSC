@@ -761,6 +761,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "ReformaGroteskDemiC";
 }
 
 .table-first-item img {
@@ -1060,6 +1061,116 @@ footer {
           transform: rotate(180deg) translateY(40%);
 }
 
+.services__btn {
+  max-width: 460px;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-family: "ReformaGroteskDemiC";
+}
+
+.services__btn-item {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 20px 40px 10px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.services__btn-red {
+  background: #DB3138;
+}
+
+.services__net {
+  padding-top: 80px;
+  padding-bottom: 160px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  width: 100%;
+}
+
+.services__net-item {
+  border: 1px solid #898989;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "ReformaGroteskDemiC";
+  padding-top: 86px;
+  padding-bottom: 52px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+}
+
+.services__net-item img {
+  margin-bottom: 25px;
+}
+
+.services__net-item h5 {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.services__net-item p {
+  margin-bottom: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.services__net-item a {
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 140%;
+  padding: 10px 10px 6px 20px;
+  position: relative;
+}
+
+.services__net-item a .services__btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+.services__net-item a .services__btn-dekor {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #DB3138;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+}
+
 @media (min-width: 600px) {
   .mobileNone {
     display: block;
@@ -1339,6 +1450,50 @@ footer {
   .tablet-next {
     margin-left: calc(10px + 15 * ((100vw - 320px) / 1920));
   }
+
+  .services__btn-item {
+    font-size: calc(18px + 14 * ((100vw - 320px) / 1920));
+  }
+
+  .services__btn-item {
+    padding-top: calc(10px + 10 * ((100vw - 320px) / 1920));
+  }
+
+  .services__btn-item {
+    padding-left: calc(25px + 15 * ((100vw - 320px) / 1920));
+  }
+
+  .services__btn-item {
+    padding-right: calc(25px + 15 * ((100vw - 320px) / 1920));
+  }
+
+  .services__net {
+    padding-top: calc(40px + 40 * ((100vw - 320px) / 1920));
+  }
+
+  .services__net {
+    padding-bottom: calc(80px + 80 * ((100vw - 320px) / 1920));
+  }
+
+  .services__net-item {
+    padding-top: calc(50px + 36 * ((100vw - 320px) / 1920));
+  }
+
+  .services__net-item {
+    padding-bottom: calc(30px + 22 * ((100vw - 320px) / 1920));
+  }
+
+  .services__net-item {
+    padding-left: calc(20px + 20 * ((100vw - 320px) / 1920));
+  }
+
+  .services__net-item {
+    padding-right: calc(20px + 20 * ((100vw - 320px) / 1920));
+  }
+
+  .services__net-item h5 {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1920));
+  }
 }
 
 @media (max-width: 992px) {
@@ -1399,6 +1554,7 @@ footer {
 
   .assurance__text {
     padding-left: 10px;
+    margin-right: 0;
   }
 
   .assurance__controls {
@@ -1429,6 +1585,12 @@ footer {
     height: 70px;
     background-color: #DB3138;
     z-index: 1;
+  }
+
+  .services__net {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
   }
 }
 
@@ -1563,6 +1725,10 @@ footer {
   .assurance__controls p {
     font-size: 16px;
   }
+
+  .services__net-item p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 767px) and (max-width: 1580px) {
@@ -1665,6 +1831,15 @@ footer {
     margin-right: 0;
     margin-bottom: 10px;
   }
+
+  .services__btn {
+    max-width: 320px;
+  }
+
+  .services__net {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 599px) {
@@ -1696,6 +1871,27 @@ footer {
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
     height: 100%;
+  }
+
+  .services__btn-red:hover {
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    background: #c22b30;
+  }
+
+  .services__btn-transparent:hover {
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    color: rgb(212, 199, 199);
+  }
+
+  .services__net-item a:hover .services__btn-dekor {
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    width: 100%;
   }
 }
 

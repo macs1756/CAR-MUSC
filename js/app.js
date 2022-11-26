@@ -225,7 +225,7 @@ new Swiper('.swiper__assurance', {
       slidesPerView: 1,
       loop: false,
     },
-    600: {
+    601: {
       loop: true,
     },
     767: {
@@ -243,3 +243,32 @@ new Swiper('.swiper__assurance', {
     prevEl: '.prev',
   },
   });
+
+  new Swiper('.swiper__assurance-2', {
+    pagination: {
+      el: ".progressbar-3",
+      type: "progressbar"
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        loop: false,
+      },
+      601: {
+        loop: true,
+      },
+      767: {
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 25,
+      },  
+      993: {
+        slidesPerView: 1,
+        loop: true,
+      }
+    },
+    navigation: {
+      nextEl: '.next',
+      prevEl: '.prev',
+    },
+    });

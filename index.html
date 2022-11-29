@@ -6,16 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20221127141904" />
-	<link rel="stylesheet" href="css/style.css?_v=20221127141904">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20221129192923" />
+	<link rel="stylesheet" href="css/style.css?_v=20221129192923">
 </head>
-
 <body>
-
 	<div class="wrapper">
-
-
-
 		
 <header class="header">	
 	<div class="header__wr d-flex a-i-center j-c-space container">
@@ -39,8 +34,6 @@
 	</div>
 			
 </header>
-
-
 
 
 
@@ -410,7 +403,7 @@
 			
 			<div class="assurance__slider assurance__slider-mobile">
 		
-				<img class="assurance__arrow-tablet tablet-prev prev" src="img/arrow.svg" alt="arrow">
+				<img class="assurance__arrow-tablet tablet-prev prev2" src="img/arrow.svg" alt="arrow">
 		
 				<div class="swiper__assurance-2">
 					<div class="swiper-wrapper">
@@ -418,37 +411,37 @@
 						<div class="swiper-slide">
 							<picture><source srcset="img/assurance__slider-1.webp" type="image/webp"><img  class="assurance__main" src="img/assurance__slider-1.jpg" alt="slide photo"></picture>
 							<div class="assurance__controls d-flex a-i-center j-c-space">
-								<img class="assurance__prev prev" src="img/arrow.svg" alt="arrow">
+								<img class="assurance__prev prev2" src="img/arrow.svg" alt="arrow">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor nibh feugiat est. Consectetur lectus.</p>
 								<span></span>
-								<img class="assurance__next next" src="img/arrow.svg" alt="arrow">
+								<img class="assurance__next next2" src="img/arrow.svg" alt="arrow">
 							</div>
 						</div>
 		
 						<div class="swiper-slide">
 							<picture><source srcset="img/slide-1.webp" type="image/webp"><img class="assurance__main" src="img/slide-1.jpg" alt="img"></picture>
 							<div class="assurance__controls d-flex a-i-center j-c-space">
-								<img class="assurance__prev prev" src="img/arrow.svg" alt="arrow">
+								<img class="assurance__prev prev2" src="img/arrow.svg" alt="arrow">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor nibh feugiat est. Consectetur lectus.</p>
 								<span></span>
-								<img class="assurance__next next" src="img/arrow.svg" alt="arrow">
+								<img class="assurance__next next2" src="img/arrow.svg" alt="arrow">
 							</div>
 						</div>
 		
 						<div class="swiper-slide">
 							<picture><source srcset="img/slide-2.webp" type="image/webp"><img class="assurance__main" src="img/slide-2.jpg" alt="img"></picture>
 							<div class="assurance__controls d-flex a-i-center j-c-space">
-								<img class="assurance__prev prev" src="img/arrow.svg" alt="arrow">
+								<img class="assurance__prev prev2" src="img/arrow.svg" alt="arrow">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor nibh feugiat est. Consectetur lectus.</p>
 								<span></span>
-								<img class="assurance__next next" src="img/arrow.svg" alt="arrow">
+								<img class="assurance__next next2" src="img/arrow.svg" alt="arrow">
 							</div>
 						</div>
 		
 					</div>
 				</div>
 		
-				<img class="assurance__arrow-tablet tablet-next next" src="img/arrow.svg" alt="arrow">
+				<img class="assurance__arrow-tablet tablet-next next2" src="img/arrow.svg" alt="arrow">
 				<div class="progressbar__wr">
 					<div class="progressbar-3"></div>
 					<picture><source srcset="img/swipe-left.webp" type="image/webp"><img class="progressbar__hint" src="img/swipe-left.png" alt="swipe"></picture>
@@ -528,8 +521,6 @@
 		</div>
 	</div>
 </section>
-
-
 			<section class="subfooter d-flex flex-column a-i-center container">
 		<h2>ответим на любой вопрос</h2>
 		<div class="attainment__dekor initial__dekor dekor">
@@ -540,8 +531,8 @@
 		</div>
 		<div class="subfooter__form">
 			<div class="w100 d-flex first">
-				<input type="text" placeholder="Имя" name="user_name">
-				<input type="tell" placeholder="телефон" name="user_tell">
+				<input type="text" placeholder="Имя" id="user_name" name="user_name">
+				<input maxlength="15" type="tell" placeholder="телефон" id="user_tell" name="user_tell">
 			</div>
 			<div class="second d-flex w100 j-c-space a-i-start">
 				<textarea name="comment" placeholder="Вопрос по дизайну, тюнингу и др."></textarea>
@@ -560,8 +551,8 @@
 				</div>
 			</div>
 			<div class="three d-flex a-i-center j-c-space">
-				<button class="initial__btn" href="#"><span>отправить</span></button>
-				<div data-da=".footer,600,0" class="three__info">
+				<button id="form__submit" class="initial__btn" href="#"><span>отправить</span></button>
+				<div data-da=".footer__second,600,0" class="three__info">
 					<div class="d-flex a-i-center j-c-end three__info-map">
 						<img src="img/map.svg" alt="ico">
 						<span>Eu faucibus et rutrum fringilla orci nunc</span>
@@ -581,21 +572,30 @@
 		</div>
 </section>	
 		</main>
-
-		
-
-<footer class="footer">
-	f
-</footer>
-
-
+		<footer class="footer">
+	<div class="container">
+		<div class="footer__first d-flex a-i-center j-c-space">
+			<p class="footer__autor">
+				The author of the website 
+				<a href="#">inst: macs_1756</a>, desktop design 
+				<a href="#">Billie Eilish</a>, mobile design 
+				<a href="#">inst: macs_1756</a> 
+			</p>
+			<ul class="d-flex a-i-center footer__list">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Оклейка автомобилей</a></li>
+				<li><a href="#">Детейлинг автомобилей</a></li>
+				<li><a href="#">Галерея работ</a></li>
+			</ul>
+		</div>
+		<div class="footer__second"></div>
 	</div>
-
-
-	<script src="js/dynamicAdapt.js?_v=20221127141904"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js?_v=20221127141904"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20221127141904"></script>
-	<script src="js/app.js?_v=20221127141904"></script>
+</footer>
+	</div>
+	<script src="js/dynamicAdapt.js?_v=20221129192923"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js?_v=20221129192923"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20221129192923"></script>
+	<script src="js/app.js?_v=20221129192923"></script>
 </body>
 
 </html>

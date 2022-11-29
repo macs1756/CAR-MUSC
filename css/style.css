@@ -456,6 +456,7 @@ h4 {
   -webkit-transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
   -o-transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
   transition: all 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+  overflow: auto;
 }
 
 .burger__body a {
@@ -475,8 +476,35 @@ h4 {
 }
 
 footer {
-  height: 200vh;
-  padding-top: 100px;
+  border-top: 1px solid #898989;
+  margin-top: 100px;
+  padding-top: 34px;
+  padding-bottom: 50px;
+}
+
+.footer__second {
+  display: none;
+}
+
+.footer__list {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  margin-left: 10px;
+  letter-spacing: 0.05em;
+  font-family: "ReformaGroteskMediumC";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.footer__list li:not(:last-child) {
+  padding-right: 40px;
+}
+
+.footer__autor {
+  text-align: left;
 }
 
 .project__net {
@@ -659,6 +687,30 @@ footer {
 
 .three__info-info a img {
   margin-right: 10px;
+}
+
+.footer__autor {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  font-family: "ReformaGroteskDemiC";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.footer__autor a {
+  color: #DB3138;
+}
+
+#user_name,
+#user_tell {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .no-webp .initial {
@@ -1444,6 +1496,26 @@ footer {
     padding-bottom: calc(20px + 20 * ((100vw - 320px) / 1920));
   }
 
+  footer {
+    margin-top: calc(50px + 50 * ((100vw - 320px) / 1920));
+  }
+
+  footer {
+    padding-top: calc(25px + 9 * ((100vw - 320px) / 1920));
+  }
+
+  footer {
+    padding-bottom: calc(30px + 20 * ((100vw - 320px) / 1920));
+  }
+
+  .footer__list {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1920));
+  }
+
+  .footer__list li:not(:last-child) {
+    padding-right: calc(10px + 30 * ((100vw - 320px) / 1920));
+  }
+
   .subfooter {
     padding-top: calc(60px + 60 * ((100vw - 320px) / 1920));
   }
@@ -1819,6 +1891,22 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .footer__list {
+    padding-top: 20px;
+    margin-left: 0;
+  }
+
+  .footer__first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__autor {
+    text-align: center;
+  }
+
   .project__net {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
@@ -1990,6 +2078,11 @@ footer {
     bottom: calc(50% - 1px);
   }
 
+  .footer__second {
+    display: block;
+    padding-top: 20px;
+  }
+
   .project__net {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
@@ -2036,6 +2129,38 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+  }
+
+  .three__info span {
+    text-align: center;
+  }
+
+  .three__info-map {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .three__info-map img {
+    margin-right: 5px;
+  }
+
+  .three__info-info a:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .three__info-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .three {
@@ -2129,6 +2254,24 @@ footer {
   }
 }
 
+@media (max-width: 480px) {
+  .footer__list li:not(:last-child) {
+    padding-right: 0;
+  }
+
+  .footer__list li {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .footer__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media (max-width: 380px) {
   .three {
     -webkit-box-pack: center;
@@ -2144,6 +2287,14 @@ footer {
 }
 
 @media (any-hover: hover) {
+  .three__info-info a:hover {
+    text-decoration: underline;
+  }
+
+  .footer__autor a:hover {
+    text-decoration: underline;
+  }
+
   .initial__btn:hover:after,
   .btn:hover:after {
     content: "";

@@ -508,6 +508,7 @@ footer {
 }
 
 .project__net {
+  margin-top: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[6];
